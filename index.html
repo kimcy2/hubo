@@ -1,121 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>후보자 바로가기</title>
+
+  <!-- 검색 최소화 -->
+  <meta name="robots" content="noindex, nofollow" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <main class="wrap">
-    <header class="header">
-      <h1>후보자 바로가기</h1>
-      <p class="sub">이름 옆 버튼을 눌러 <b>페이스북</b> / <b>네이버 뉴스</b>로 바로 이동합니다.</p>
+    <header class="top">
+      <h1>예비후보</h1>
+      <p class="sub">Facebook · Naver News · YouTube</p>
     </header>
 
-    <!-- 상단 5명 (요청 순서) -->
-    <section class="panel">
-      <h2 class="panel-title">주요 후보</h2>
+    <!-- 주요 후보 -->
+    <section class="block">
+      <h2 class="block-title">주요 후보</h2>
 
-      <div class="list">
-
-        <article class="card">
-          <div class="row">
-            <div class="name">김병욱</div>
-            <div class="actions">
-              <a class="btn fb" href="https://www.facebook.com/share/17v5Ugk2Nz/" target="_blank" rel="noopener">Facebook</a>
-              <a class="btn nv" href="https://search.naver.com/search.naver?where=news&query=%EA%B9%80%EB%B3%91%EC%9A%B1" target="_blank" rel="noopener">Naver</a>
-            </div>
+      <article class="card priority">
+        <div class="row">
+          <div class="name">김병욱</div>
+          <div class="actions" aria-label="김병욱 링크">
+            <a class="iconbtn fb" href="https://www.facebook.com/share/17v5Ugk2Nz/" target="_blank" rel="noopener" aria-label="Facebook">
+              <img alt="Facebook" src="https://cdn.simpleicons.org/facebook/ffffff" />
+            </a>
+            <a class="iconbtn nv" href="https://search.naver.com/search.naver?where=news&query=김병욱" target="_blank" rel="noopener" aria-label="Naver News">
+              <img alt="Naver" src="https://cdn.simpleicons.org/naver/ffffff" />
+            </a>
+            <a class="iconbtn yt" href="https://youtube.com/channel/UCpC0H3sU17tiN4GvmY4TAag?si=lKXVf1Ik0_2owyQN" target="_blank" rel="noopener" aria-label="YouTube">
+              <img alt="YouTube" src="https://cdn.simpleicons.org/youtube/ffffff" />
+            </a>
           </div>
-        </article>
+        </div>
+      </article>
 
-        <article class="card">
-          <div class="row">
-            <div class="name">박승호</div>
-            <div class="actions">
-              <a class="btn fb" href="https://www.facebook.com/share/1BVHskLJfQ/" target="_blank" rel="noopener">Facebook</a>
-              <a class="btn nv" href="https://search.naver.com/search.naver?where=news&query=%EB%B0%95%EC%8A%B9%ED%98%B8" target="_blank" rel="noopener">Naver</a>
-            </div>
+      <article class="card priority">
+        <div class="row">
+          <div class="name">박승호</div>
+          <div class="actions" aria-label="박승호 링크">
+            <a class="iconbtn fb" href="https://www.facebook.com/share/1BVHskLJfQ/" target="_blank" rel="noopener" aria-label="Facebook">
+              <img alt="Facebook" src="https://cdn.simpleicons.org/facebook/ffffff" />
+            </a>
+            <a class="iconbtn nv" href="https://search.naver.com/search.naver?where=news&query=박승호" target="_blank" rel="noopener" aria-label="Naver News">
+              <img alt="Naver" src="https://cdn.simpleicons.org/naver/ffffff" />
+            </a>
+            <a class="iconbtn yt" href="https://youtube.com/@tv-ri6tf?si=1wXAqpq10p_1HGn0" target="_blank" rel="noopener" aria-label="YouTube">
+              <img alt="YouTube" src="https://cdn.simpleicons.org/youtube/ffffff" />
+            </a>
           </div>
-        </article>
+        </div>
+      </article>
 
-        <article class="card">
-          <div class="row">
-            <div class="name">공원식</div>
-            <div class="actions">
-              <a class="btn fb" href="https://www.facebook.com/share/1CvAd23TrX/" target="_blank" rel="noopener">Facebook</a>
-              <a class="btn nv" href="https://search.naver.com/search.naver?where=news&query=%EA%B3%B5%EC%9B%90%EC%8B%9D" target="_blank" rel="noopener">Naver</a>
-            </div>
+      <article class="card priority">
+        <div class="row">
+          <div class="name">공원식</div>
+          <div class="actions" aria-label="공원식 링크">
+            <a class="iconbtn fb" href="https://www.facebook.com/share/1CvAd23TrX/" target="_blank" rel="noopener" aria-label="Facebook">
+              <img alt="Facebook" src="https://cdn.simpleicons.org/facebook/ffffff" />
+            </a>
+            <a class="iconbtn nv" href="https://search.naver.com/search.naver?where=news&query=공원식" target="_blank" rel="noopener" aria-label="Naver News">
+              <img alt="Naver" src="https://cdn.simpleicons.org/naver/ffffff" />
+            </a>
+            <a class="iconbtn yt" href="https://youtube.com/channel/UC1S0vU-lfoMrazfVxl2jXlA?si=g0oCrSopuRWlru8G" target="_blank" rel="noopener" aria-label="YouTube">
+              <img alt="YouTube" src="https://cdn.simpleicons.org/youtube/ffffff" />
+            </a>
           </div>
-        </article>
+        </div>
+      </article>
 
-        <article class="card">
-          <div class="row">
-            <div class="name">안승대</div>
-            <div class="actions">
-              <a class="btn fb" href="https://www.facebook.com/share/17oL8v44Fn/" target="_blank" rel="noopener">Facebook</a>
-              <a class="btn nv" href="https://search.naver.com/search.naver?where=news&query=%EC%95%88%EC%8A%B9%EB%8C%80" target="_blank" rel="noopener">Naver</a>
-            </div>
+      <article class="card priority">
+        <div class="row">
+          <div class="name">안승대</div>
+          <div class="actions" aria-label="안승대 링크">
+            <a class="iconbtn fb" href="https://www.facebook.com/share/17oL8v44Fn/" target="_blank" rel="noopener" aria-label="Facebook">
+              <img alt="Facebook" src="https://cdn.simpleicons.org/facebook/ffffff" />
+            </a>
+            <a class="iconbtn nv" href="https://search.naver.com/search.naver?where=news&query=안승대" target="_blank" rel="noopener" aria-label="Naver News">
+              <img alt="Naver" src="https://cdn.simpleicons.org/naver/ffffff" />
+            </a>
+            <a class="iconbtn yt" href="https://youtube.com/channel/UCGdcTgN5wT6H4pyC0ZziB4A?si=aeYnVZ9Td0JPDaXH" target="_blank" rel="noopener" aria-label="YouTube">
+              <img alt="YouTube" src="https://cdn.simpleicons.org/youtube/ffffff" />
+            </a>
           </div>
-        </article>
+        </div>
+      </article>
 
-        <article class="card">
-          <div class="row">
-            <div class="name">박대기</div>
-            <div class="actions">
-              <a class="btn fb" href="https://www.facebook.com/share/1GxSzTNsAj/" target="_blank" rel="noopener">Facebook</a>
-              <a class="btn nv" href="https://search.naver.com/search.naver?where=news&query=%EB%B0%95%EB%8C%80%EA%B8%B0" target="_blank" rel="noopener">Naver</a>
-            </div>
+      <article class="card priority">
+        <div class="row">
+          <div class="name">박대기</div>
+          <div class="actions" aria-label="박대기 링크">
+            <a class="iconbtn fb" href="https://www.facebook.com/share/1GxSzTNsAj/" target="_blank" rel="noopener" aria-label="Facebook">
+              <img alt="Facebook" src="https://cdn.simpleicons.org/facebook/ffffff" />
+            </a>
+            <a class="iconbtn nv" href="https://search.naver.com/search.naver?where=news&query=박대기" target="_blank" rel="noopener" aria-label="Naver News">
+              <img alt="Naver" src="https://cdn.simpleicons.org/naver/ffffff" />
+            </a>
+            <a class="iconbtn yt" href="https://youtube.com/@standby_park?si=TeezD6GAd1EYhyiZ" target="_blank" rel="noopener" aria-label="YouTube">
+              <img alt="YouTube" src="https://cdn.simpleicons.org/youtube/ffffff" />
+            </a>
           </div>
-        </article>
-
-      </div>
+        </div>
+      </article>
     </section>
 
-    <!-- 나머지 후보 -->
-    <section class="panel">
-      <h2 class="panel-title">기타 후보</h2>
+    <!-- 기타 후보 -->
+    <section class="block">
+      <h2 class="block-title">다른 후보</h2>
 
-      <div class="list">
-
-        <article class="card">
-          <div class="row">
-            <div class="name">박용선</div>
-            <div class="actions">
-              <a class="btn fb" href="https://www.facebook.com/share/1D8JD5JXtK/" target="_blank" rel="noopener">Facebook</a>
-              <a class="btn nv" href="https://search.naver.com/search.naver?where=news&query=%EB%B0%95%EC%9A%A9%EC%84%A0" target="_blank" rel="noopener">Naver</a>
-            </div>
+      <article class="card">
+        <div class="row">
+          <div class="name">박용선</div>
+          <div class="actions" aria-label="박용선 링크">
+            <a class="iconbtn fb" href="https://www.facebook.com/share/1D8JD5JXtK/" target="_blank" rel="noopener" aria-label="Facebook">
+              <img alt="Facebook" src="https://cdn.simpleicons.org/facebook/ffffff" />
+            </a>
+            <a class="iconbtn nv" href="https://search.naver.com/search.naver?where=news&query=박용선" target="_blank" rel="noopener" aria-label="Naver News">
+              <img alt="Naver" src="https://cdn.simpleicons.org/naver/ffffff" />
+            </a>
+            <a class="iconbtn yt" href="https://youtube.com/channel/UCbT-hWp3TABx9gHun4AeV_g?si=R7FPiO-Ns3g1kQbK" target="_blank" rel="noopener" aria-label="YouTube">
+              <img alt="YouTube" src="https://cdn.simpleicons.org/youtube/ffffff" />
+            </a>
           </div>
-        </article>
+        </div>
+      </article>
 
-        <article class="card">
-          <div class="row">
-            <div class="name">김일만</div>
-            <div class="actions">
-              <a class="btn fb" href="https://www.facebook.com/share/1DFQT2mPWG/" target="_blank" rel="noopener">Facebook</a>
-              <a class="btn nv" href="https://search.naver.com/search.naver?where=news&query=%EA%B9%80%EC%9D%BC%EB%A7%8C" target="_blank" rel="noopener">Naver</a>
-            </div>
+      <article class="card">
+        <div class="row">
+          <div class="name">김일만</div>
+          <div class="actions" aria-label="김일만 링크">
+            <a class="iconbtn fb" href="https://www.facebook.com/share/1DFQT2mPWG/" target="_blank" rel="noopener" aria-label="Facebook">
+              <img alt="Facebook" src="https://cdn.simpleicons.org/facebook/ffffff" />
+            </a>
+            <a class="iconbtn nv" href="https://search.naver.com/search.naver?where=news&query=김일만" target="_blank" rel="noopener" aria-label="Naver News">
+              <img alt="Naver" src="https://cdn.simpleicons.org/naver/ffffff" />
+            </a>
+            <a class="iconbtn yt" href="https://youtube.com/@pohangilman?si=lzhIMGXFhzhMS9ev" target="_blank" rel="noopener" aria-label="YouTube">
+              <img alt="YouTube" src="https://cdn.simpleicons.org/youtube/ffffff" />
+            </a>
           </div>
-        </article>
+        </div>
+      </article>
 
-        <article class="card">
-          <div class="row">
-            <div class="name">이칠구</div>
-            <div class="actions">
-              <a class="btn fb" href="https://www.facebook.com/share/1GYvxUeEp5/" target="_blank" rel="noopener">Facebook</a>
-              <a class="btn nv" href="https://search.naver.com/search.naver?where=news&query=%EC%9D%B4%EC%B9%A0%EA%B5%AC" target="_blank" rel="noopener">Naver</a>
-            </div>
+      <article class="card">
+        <div class="row">
+          <div class="name">이칠구</div>
+          <div class="actions" aria-label="이칠구 링크">
+            <a class="iconbtn fb" href="https://www.facebook.com/share/1GYvxUeEp5/" target="_blank" rel="noopener" aria-label="Facebook">
+              <img alt="Facebook" src="https://cdn.simpleicons.org/facebook/ffffff" />
+            </a>
+            <a class="iconbtn nv" href="https://search.naver.com/search.naver?where=news&query=이칠구" target="_blank" rel="noopener" aria-label="Naver News">
+              <img alt="Naver" src="https://cdn.simpleicons.org/naver/ffffff" />
+            </a>
+            <a class="iconbtn yt" href="https://youtube.com/channel/UCUeV35evppF6aoF58rSuing?si=dtQRcFnFJnsvScEQ" target="_blank" rel="noopener" aria-label="YouTube">
+              <img alt="YouTube" src="https://cdn.simpleicons.org/youtube/ffffff" />
+            </a>
           </div>
-        </article>
-
-      </div>
+        </div>
+      </article>
     </section>
 
-    <footer class="footer">
-      <div class="tip">모바일에서는 버튼이 더 크게 표시됩니다.</div>
+    <footer class="foot">
+      <small>후보자 SNS 바로가기</small>
     </footer>
   </main>
-
 </body>
 </html>
