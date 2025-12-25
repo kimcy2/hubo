@@ -1,13 +1,16 @@
 :root{
   --bg0:#070A12;
   --bg1:#0B1230;
+
   --card: rgba(255,255,255,.08);
   --line: rgba(255,255,255,.18);
   --text: rgba(255,255,255,.95);
   --muted: rgba(255,255,255,.7);
+
   --fb:#1877F2;
   --nv:#03C75A;
   --yt:#FF0000;
+
   --shadow: 0 18px 50px rgba(0,0,0,.55);
 }
 
@@ -15,46 +18,54 @@
 
 body{
   margin:0;
-  font-family:Pretendard, system-ui, -apple-system, "Noto Sans KR", sans-serif;
+  font-family: Pretendard, system-ui, -apple-system, "Noto Sans KR", sans-serif;
   background: linear-gradient(180deg, var(--bg0), var(--bg1));
-  color:var(--text);
+  color: var(--text);
 }
 
 .wrap{
-  max-width:900px;
+  max-width:1100px;
   margin:auto;
   padding:24px 14px 36px;
 }
 
-/* ✅ 중앙 정렬 영역 */
-.top,
-.sub,
-.block-title,
-.foot{
+.top{
   text-align:center;
 }
-
 .top h1{
   margin:0;
   font-size:34px;
 }
-
 .sub{
-  margin-top:8px;
+  margin:8px 0 0;
   color:var(--muted);
+  text-align:center; /* 이름 말고 텍스트는 중간 */
+}
+
+/* PC 2열 / 모바일 1열 */
+.grid{
+  margin-top:20px;
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:18px;
 }
 
 .block{
-  margin-top:20px;
   padding:18px;
   border-radius:18px;
   background:rgba(255,255,255,.06);
   box-shadow:var(--shadow);
 }
 
+.block-title{
+  font-size:22px;
+  margin:0 0 14px;
+  text-align:center; /* 이름 말고 텍스트는 중간 */
+}
+
 .card{
   margin:12px 0;
-  padding:16px;
+  padding:14px 14px;
   border-radius:16px;
   background:var(--card);
   border:1px solid var(--line);
@@ -64,41 +75,53 @@ body{
   border:1px solid rgba(255,255,255,.45);
 }
 
-/* ✅ 이름만 왼쪽 */
+/* 이름은 왼쪽 */
 .row{
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:12px;
+  width:100%;
 }
 
 .name{
   font-size:28px;
   font-weight:800;
+  margin:0;
   text-align:left;
+  white-space:nowrap;
+  flex:0 0 auto;
 }
 
-/* 로고 영역 */
+/* 로고만 */
 .actions{
   display:flex;
+  justify-content:flex-end;
   gap:10px;
+  flex:0 0 auto;
 }
 
 .iconbtn{
-  width:44px;
-  height:44px;
+  width:42px;
+  height:42px;
   border-radius:999px;
-  display:flex;
+  display:inline-flex;
   align-items:center;
   justify-content:center;
-  border:1px solid rgba(255,255,255,.22);
-  box-shadow:0 10px 22px rgba(0,0,0,.35);
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow: 0 10px 26px rgba(0,0,0,.35);
+  transition: transform .18s ease, filter .18s ease;
 }
 
 .iconbtn img{
   width:22px;
   height:22px;
+  display:block;
 }
+
+.iconbtn:active{ transform: scale(.98); }
+.iconbtn:hover{ transform: translateY(-2px); filter: brightness(1.05); }
 
 .iconbtn.fb{ background:var(--fb); }
 .iconbtn.nv{ background:var(--nv); }
@@ -106,18 +129,50 @@ body{
 
 .foot{
   margin-top:18px;
+  text-align:center; /* 이름 말고 텍스트는 중간 */
   color:var(--muted);
 }
 
-/* 모바일 */
-@media (max-width:560px){
-  .name{ font-size:26px; }
-  .iconbtn{
-    width:48px;
-    height:48px;
+/* ====== 반응형 ====== */
+
+/* PC 2열 배치: 주요후보 왼쪽 / 다른후보 오른쪽 */
+@media (min-width: 900px){
+  .grid{
+    grid-template-columns: 1fr 1fr;
+    align-items:start;
   }
+}
+
+/* 모바일에서 양쪽 벗어남 방지 */
+@media (max-width: 480px){
+  .wrap{ padding:18px 12px 28px; }
+
+  .top h1{ font-size:30px; }
+
+  .card{ padding:14px 12px; }
+
+  .row{
+    gap:10px;
+  }
+
+  .name{
+    font-size:26px;
+    min-width: 0;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+
+  .actions{
+    gap:8px;
+  }
+
+  .iconbtn{
+    width:44px;
+    height:44px;
+  }
+
   .iconbtn img{
-    width:24px;
-    height:24px;
+    width:22px;
+    height:22px;
   }
 }
