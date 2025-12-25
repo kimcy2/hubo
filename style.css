@@ -1,0 +1,184 @@
+:root{
+  --bg0:#070A12;
+  --bg1:#0B1020;
+
+  --card: rgba(255,255,255,.08);
+  --card2: rgba(255,255,255,.12);
+  --line: rgba(255,255,255,.18);
+  --lineStrong: rgba(255,255,255,.35);
+
+  --text: rgba(255,255,255,.95);
+  --muted: rgba(255,255,255,.72);
+
+  --shadow: 0 18px 60px rgba(0,0,0,.55);
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(255,255,255,.12), transparent 55%),
+    radial-gradient(900px 500px at 10% 10%, rgba(120,170,255,.14), transparent 55%),
+    radial-gradient(900px 500px at 90% 25%, rgba(255,130,190,.12), transparent 55%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+}
+
+.wrap{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+  text-align:center; /* ✅ 전체 센터 */
+}
+
+.header{
+  padding: 12px 10px 18px;
+}
+.header h1{
+  margin: 0;
+  font-size: 34px;
+  letter-spacing: -0.02em;
+}
+.sub{
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.panel{
+  margin-top: 18px;
+  padding: 18px 14px;
+  border: 2px solid var(--lineStrong);     /* ✅ 후보 구분 더 눈에 띄게 */
+  border-radius: 18px;
+  background: rgba(255,255,255,.05);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.panel-title{
+  margin: 0 0 14px;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+}
+
+.list{
+  display: grid;
+  gap: 12px;
+}
+
+/* ✅ 카드 구분을 확실하게 */
+.card{
+  border: 2px solid var(--lineStrong);
+  border-radius: 16px;
+  background: linear-gradient(180deg, var(--card), rgba(255,255,255,.06));
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  overflow: hidden;
+}
+
+/* ✅ 이름 + 버튼을 한 줄에 */
+.row{
+  display:flex;
+  align-items:center;
+  justify-content:center; /* 센터 유지 */
+  gap: 14px;
+  padding: 16px 14px;
+  flex-wrap: wrap; /* PC에서도 너무 길면 줄바꿈 허용 */
+}
+
+.name{
+  font-size: 30px;     /* ✅ 이름 크게 */
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  padding: 2px 6px;
+}
+
+/* ✅ 버튼 영역 */
+.actions{
+  display:flex;
+  gap: 10px;
+  justify-content:center;
+  align-items:center;
+}
+
+/* ✅ 버튼: 작지만 명확, 모바일은 더 큼 */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-weight: 800;
+  font-size: 13px;      /* PC 기준 작게 */
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 2px solid rgba(255,255,255,.28);
+  background: rgba(255,255,255,.08);
+  color: var(--text);
+  line-height: 1;
+  min-height: 34px;
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+  user-select:none;
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.12);
+  border-color: rgba(255,255,255,.38);
+}
+
+.btn:active{
+  transform: translateY(0px) scale(0.99);
+}
+
+/* ✅ 버튼 색감(눈에 띄게) */
+.btn.fb{
+  border-color: rgba(120,170,255,.55);
+  background: rgba(120,170,255,.16);
+}
+.btn.nv{
+  border-color: rgba(120,255,170,.55);
+  background: rgba(120,255,170,.14);
+}
+
+.footer{
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.tip{
+  padding: 10px 12px;
+}
+
+/* =========================
+   📱 모바일 최적화
+   - 버튼 더 크게, 더 잘 눌리게
+   - 이름도 조금 더 강조
+========================= */
+@media (max-width: 520px){
+  .header h1{ font-size: 30px; }
+
+  .panel{ padding: 16px 12px; }
+  .panel-title{ font-size: 20px; }
+
+  .row{
+    gap: 10px;
+    padding: 16px 12px;
+  }
+
+  .name{
+    font-size: 32px;   /* 모바일에서 더 크게 */
+  }
+
+  .actions{
+    gap: 10px;
+  }
+
+  .btn{
+    font-size: 14px;
+    padding: 12px 14px;  /* ✅ 터치 영역 확대 */
+    min-height: 44px;    /* ✅ 모바일 권장 터치 높이 */
+    border-width: 2px;
+  }
+}
